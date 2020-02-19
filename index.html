@@ -6,14 +6,20 @@
     </head>
 
     <body>
+        <style>
+            * {
+                text-align: center;
+            }
+        </style>
 
-        <h1>Is it Wednesday?</h1>
+        <h1 id="title">No no no, no Mister Wednesday. We need more Lemon pledge.</h1>
 
 
-        <p id="demo"></p>
+        <p id="subtitle"></p>
 
         <script>
             var d = new Date().getDay();
+
             var msg;
             if (d < 3) {
                 var daysToWednesday = 3 - d;
@@ -22,9 +28,11 @@
                 var daysToWednesday = 3 + 7 - d;
                 msg = "Just " + daysToWednesday + " days until Wednesday, my dude!";
             } else {
-                msg = "It's Wednesday my dudes."
+                document.getElementById("title").innerHTML = "It is Wednesday, my dudes.";
+                msg = "";
             }
-            document.getElementById("demo").innerHTML = msg;
+
+            document.getElementById("subtitle").innerHTML = msg;
         </script>
 
     </body>
