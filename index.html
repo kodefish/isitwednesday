@@ -1,1 +1,26 @@
-<h1>Is it Wednesday?</h1>
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h1>Is it Wednesday?</h1>
+
+
+        <p id="demo"></p>
+
+        <script>
+            var d = new Date().getDay();
+            var msg;
+            if (d < 3) {
+                var daysToWednesday = 3 - d;
+                msg = "Just " + daysToWednesday + " days until Wednesday!";
+            } else if (d > 3) {
+                var daysToWednesday = 3 + 7 - d;
+                msg = "Just " + daysToWednesday + " days until Wednesday!";
+            } else {
+                msg = "It's Wednesday my dudes."
+            }
+            document.getElementById("demo").innerHTML = msg;
+        </script>
+
+    </body>
+</html>
